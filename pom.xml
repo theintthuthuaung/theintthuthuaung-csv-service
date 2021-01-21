@@ -1,0 +1,163 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.theintthuthuaung</groupId>
+		<artifactId>super-pom</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.theintthuthuaung</groupId>
+	<artifactId>theintthuthuaung-proj</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>theintthuthuaung-proj</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<!-- maven-compiler-plugin.version>3.1</maven-compiler-plugin.version -->
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+
+		<!-- maven-jar-plugin.version>2.4</maven-jar-plugin.version -->
+		<maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+
+		<!-- junit.version>4.11</junit.version -->
+		<junit.version>4.13</junit.version>
+
+		<log4j.version>2.13.3</log4j.version>
+
+		<!-- org.springframework.version>4.2.2.RELEASE</org.springframework.version -->
+		<org.springframework.version>5.2.8.RELEASE</org.springframework.version>
+
+		<!-- spring-security>3.2.5.RELEASE</spring-security -->
+		<spring-security>5.3.4.RELEASE</spring-security>
+
+		<!-- apache.commons-lang3.version>3.4</apache.commons-lang3.version -->
+		<apache.commons-lang3.version>3.11</apache.commons-lang3.version>
+
+		<apache.commons-collections4.version>4.4</apache.commons-collections4.version>
+
+		<apache.commons-io.version>2.7</apache.commons-io.version>
+
+		<java-source.version>1.8</java-source.version>
+
+
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
+					<inherited>true</inherited>
+					<configuration>
+						<source>${java-source.version}</source>
+						<target>${java-source.version}</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${maven-jar-plugin.version}</version>
+					<inherited>true</inherited>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<outputDirectory>target/classes</outputDirectory>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${apache.commons-lang3.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>${apache.commons-io.version}</version>
+		</dependency>
+
+	</dependencies>
+	<modules>
+		<module>../theintthuthuaung-service</module>
+	</modules>
+</project>
